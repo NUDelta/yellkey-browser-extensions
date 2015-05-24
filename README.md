@@ -1,5 +1,7 @@
-<img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/images/icon172.png">
 # Shoutkey Chrome Extension
+
+
+<img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/images/icon172.png">
 
 A chrome extension to create shoutkeys
 
