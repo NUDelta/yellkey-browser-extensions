@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Shoutkey",
+  "version": "1",
+  "description": "",
+  "options_page": "options.html",
+  "minimum_chrome_version": "29",
+  "browser_action": {
+    "default_icon": "images/icon32.png",
+    "default_title": "__MSG_extension_name__",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+  "permissions": [
+    "tabs",
+    "contextMenus",
+    "clipboardWrite",
+    "identity",
+    "https://www.googleapis.com/urlshortener/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["scripts/content_script.js"],
+      "all_frames": true
+    }
+  ],
+  "oauth2": {
+    "client_id": "577763160639-55l7f965b7gu92ulj1qu6vaeufit2rl3.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/urlshortener"
+    ]
+  }
+}

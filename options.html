@@ -1,0 +1,417 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>goo.gl URL Shortener options</title>
+		<script type="text/javascript" src="scripts/services.js"></script>
+		<script type="text/javascript" src="scripts/localstorage.js"></script>
+		<script type="text/javascript" src="scripts/keyboard_shortcuts.js"></script>
+		<script type="text/javascript" src="scripts/options.js"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheets/options.css">
+	</head>
+	<body>
+		<div class="div-main">
+			<div id="titleDiv"></div>
+			<div style="height: 18px;">
+				<span id="preferencesTab" class="tab tab-selected"></span>
+				<span id="actionsTab" class="tab tab-unselected"></span>
+				<span id="servicesTab" class="tab tab-unselected"></span>
+				<span id="shortcutsTab" class="tab tab-unselected"></span>
+				<span id="changelogTab" class="tab tab-unselected"></span>
+			</div>
+			<div id="preferencesDiv" class="tab-selected visible">
+				<div style="padding: 13px 6px 13px 6px;">
+					<table cellspacing="0" cellpadding="0" style="width:100%;">
+						<tr>
+							<td class="div-first-preferences bold" style="width:300;" id="automatically_copy_shortened_url"></td>
+							<td class="div-first-preferences">
+								<input id="autoCopyTrue" name="auto_copy" type="radio" value="true">
+								<label for="autoCopyTrue" id="autoCopyTrueLabel"></label>
+								<br>
+								<input id="autoCopyFalse" name="auto_copy" type="radio" value="false">
+								<label for="autoCopyFalse" id="autoCopyFalseLabel"></label>
+							</td>
+						</tr>				
+						<tr>
+							<td class="div-preferences bold" style="width:300px;" id="enable_keyboard_shortcuts"></td>
+							<td class="div-preferences">
+								<input id="shortcutTrue" name="shortcuts_enabled" type="radio" value="true">
+								<label for="shortcutTrue" id="shortcutTrueLabel"></label>
+								<br>
+								<input id="shortcutFalse" name="shortcuts_enabled" type="radio" value="false">
+								<label for="shortcutFalse" id="shortcutFalseLabel"></label>
+							</td>
+						</tr>					
+						<tr>
+							<td class="div-preferences bold" style="width:300px;" id="enable_context_menu"></td>
+							<td class="div-preferences">
+								<input id="contextmenuTrue" name="contextmenu_enabled" type="radio" value="true">
+								<label for="contextmenuTrue" id="contextmenuTrueLabel"></label>
+								<br>
+								<input id="contextmenuFalse" name="contextmenu_enabled" type="radio" value="false">
+								<label for="contextmenuFalse" id="contextmenuFalseLabel"></label>
+							</td>
+						</tr>
+						<tr>
+							<td class="div-preferences bold" style="width:300px;" id="enable_history"></td>
+							<td class="div-preferences">
+								<input id="historyTrue" name="history_enabled" type="radio" value="true">
+								<label for="historyTrue" id="historyTrueLabel"></label>
+								<br>
+								<input id="historyFalse" name="history_enabled" type="radio" value="false">
+								<label for="historyFalse" id="historyFalseLabel"></label>
+							</td>
+						</tr>
+						<tr>
+							<td class="div-preferences" style="width:300px;">
+								<div class="bold" id="google_url_shortener_access"></div>
+								<div style="font-size: 70%;" id="google_url_shortener_access_details"></div>
+							</td>
+							<td class="div-preferences">
+								<input type="button" name="grant" id="grant" value="Grant access" style="width: 150px;" disabled>
+								<br>
+								<input type="button" name="revoke" id="revoke" value="Revoke access" style="width: 150px;" disabled>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="actionsDiv" class="tab-selected hidden">
+				<div style="padding:13px 6px 13px 6px;">			
+					<table cellspacing="0" cellpadding="0">
+						<tr>
+							<td width="23"><input type="checkbox" id="copy"/></td>
+							<!--<td width="23"><img src="images/copy.png" width="16"></td>-->
+							<td id="tdCopy"></td>
+						</tr>
+						<tr>
+							<td width="23"><input type="checkbox" id="details"/></td>
+							<!--<td width="23"><img src="images/details.png" width="16"></td>-->
+							<td id="tdDetails"></td>
+						</tr>
+						<tr>
+							<td width="23"><input type="checkbox" id="qrcode"/></td>
+							<!--<td width="23"><img src="images/qrcode.png" width="16"></td>-->
+							<td id="tdQrCode"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="servicesDiv" class="tab-selected hidden">
+				<div style="padding: 13px 6px 13px 6px;">			
+					<table id="servicesTable" cellspacing="0" cellpadding="0"></table>
+				</div>
+			</div>
+			<div id="shortcutsDiv" class="tab-selected hidden">
+				<div style="padding: 13px 6px 13px 6px;">
+					<div style="padding: 8px 0px 20px 0px;" >
+						<div class="bold" id="pleaseNote"></div>
+						<div id="keyboard_shortcuts_warning"></div>
+					</div>
+					<table id="shortcutsTable" cellspacing="0" cellpadding="0" style="width:100%;">
+						<tr>
+							<td class="div-preferences" width="200px" id="copyShortcut"></td>
+							<td class="div-preferences" width="80%">
+								<span id="spancopyShortcut">&nbsp;</span>
+								<input id="hiddencopyShortcut" type="hidden" />
+							</td>
+							<td class="div-preferences">
+								<span class="link" id="editCopyShortcut"></span>						
+							</td>
+							<td class="div-preferences">
+								<span class="link" id="deleteCopyShortcut"></span>
+							</td>
+						</tr>
+					</table>
+					<div id="trWarning" class="hidden">
+						<div class="alert-preferences" id="reload_all_opened_tabs"></div>
+					</div>
+				</div>
+			</div>
+			<div id="changelogDiv" class="tab-selected hidden">
+				<div style="padding: 13px 6px 13px 6px;">
+					<b>Version 0.7.9</b>
+					<ul>
+						<li>Migrated from OAuth 1.0 to OAuth 2.0</li>
+					</ul>
+
+					<b>Version 0.7.8</b>
+					<ul>
+						<li>Fix oauth authentication</li>
+					</ul>
+				
+					<b>Version 0.7.7</b>
+					<ul>
+						<li>Revert original icon</li>
+					</ul>
+				
+					<b>Version 0.7.6</b>
+					<ul>
+						<li>New icon</li>
+						<li>Fixed keyboard shortcut issue</li>
+						<li>Removed unavailable services</li>
+					</ul>
+				
+					<b>Version 0.7.5</b>
+					<ul>
+						<li>Fixed "Port: Could not establish connection. Receiving end does not exist." exception</li>
+					</ul>
+				
+					<b>Version 0.7.4</b>
+					<ul>
+						<li>Fixed "Cannot read property 'shortcuts_enabled' of undefined" exception</li>
+					</ul>
+				
+					<b>Version 0.7.3</b>
+					<ul>
+						<li>Updated to Manifest Version 2</li>
+						<li>Updated services list</li>
+					</ul>
+				
+					<b>Version 0.7.2</b>
+					<ul>
+						<li>Added Google+</li>
+					</ul>
+				
+					<b>Version 0.7.1</b>
+					<ul>
+						<li>Added image context menu</li>
+						<li>Added page context menu</li>
+						<li>Minor bug fixes</li>						
+					</ul>
+				
+					<b>Version 0.7.0</b>
+					<ul>
+						<li>Localization support</li>
+						<li>Italian localization</li>
+						<li>Improved keyboard shorcuts</li>
+						<li>New keyboard shortcuts layout</li>
+						<li>Added 100zakladok</li>
+						<li>Added 7live7</li>
+						<li>Added AOL Mail</li>
+						<li>Added Baidu</li>
+						<li>Added Bebo</li>
+						<li>Added Blip</li>
+						<li>Added Bobrdobr</li>
+						<li>Added Formspring</li>
+						<li>Added Friendster</li>
+						<li>Added Hatena</li>
+						<li>Added Hyves</li>
+						<li>Added Identi.ca</li>
+						<li>Added iWiW</li>
+						<li>Added Lifestream</li>
+						<li>Added LiveJournal</li>
+						<li>Added Mail.ru</li>
+						<li>Added meinVZ</li>
+						<li>Added Menéame</li>
+						<li>Added Mister Wong</li>
+						<li>Added Multiply</li>
+						<li>Added NUjij</li>
+						<li>Added OKNOtizie</li>
+						<li>Added Oyyla</li>
+						<li>Added Plaxo</li>
+						<li>Added Plurk</li>
+						<li>Added Segnalo</li>
+						<li>Added Sina Weibo</li>
+						<li>Added Sonico</li>
+						<li>Added studiVZ</li>
+						<li>Added Tuenti</li>
+						<li>Added TweetMeme</li>
+						<li>Added TwitThat</li>
+						<li>Added TwitThis</li>
+						<li>Added Viadeo</li>
+						<li>Added Wykop</li>
+						<li>Added XING</li>
+						<li>Added Yammer</li>
+						<li>Minor bug fixes</li>
+					</ul>
+				
+					<b>Version 0.6.3</b>
+					<ul>
+						<li>New font <a href="http://www.google.com/webfonts/specimen/Inconsolata">Inconsolata</a> for shortened url</li>
+						<li>Added Springpad</li>
+					</ul>
+				
+					<b>Version 0.6.2</b>
+					<ul>
+						<li>Required chrome version 9.0.597 or higher</li>
+					</ul>
+				
+					<b>Version 0.6.1</b>
+					<ul>
+						<li>Added new permission to copy url to clipboard</li>
+						<li>Added timeout handler</li>
+						<li>Changed Twitter url</li>
+						<li>Changed Disapora* url</li>
+					</ul>
+				
+					<b>Version 0.6.0</b>
+					<ul>
+						<li>Official goo.gl API support</li>
+						<li>Official goo.gl dashboard support</li>
+						<li>Added Diaspora*</li>
+						<li>Added Diigo</li>
+						<li>Added VKontakte</li>
+						<li>Twitter on https</li>
+					</ul>
+					
+					<b>Version 0.5.7</b>
+					<ul>
+						<li>Fixed shortcuts bug</li>
+					</ul>
+					
+					<b>Version 0.5.6</b>
+					<ul>
+						<li>Minor bug fixes</li>
+					</ul>
+				
+					<b>Version 0.5.5</b>
+					<ul>
+						<li>Minor bug fixes</li>
+					</ul>
+				
+					<b>Version 0.5.4</b>
+					<ul>
+						<li>Added Evernote</li>
+						<li>Added FriendFeed</li>
+						<li>Added Google Bookmarks</li>
+						<li>Added Hotmail</li>
+						<li>Added Instapaper</li>
+						<li>Added LinkedIn</li>
+						<li>Added Netlog</li>
+						<li>Added Orkut</li>
+						<li>Added Ping.fm</li>
+						<li>Added Posterous</li>
+						<li>Added Reddit</li>
+						<li>Added Read It Later</li>
+						<li>Added StumbleUpon</li>
+						<li>Added Technorati</li>
+						<li>Added Tumblr</li>
+						<li>Added Yahoo! Bookmarks</li>
+						<li>Added Yahoo! Mail</li>
+					</ul>
+				
+					<b>Version 0.5.3</b>
+					<ul>
+						<li>Shortened url not saved to history in Incognito mode</li>
+						<li>Required chrome version 6 or higher</li>
+						<li>Workaround to fix popup bug in chrome version 9.0.567 dev</li>
+					</ul>
+					
+					<b>Version 0.5.2</b>
+					<ul>
+						<li>Shortcuts are now not triggered when compiling web form</li>
+					</ul>
+				
+					<b>Version 0.5.1</b>
+					<ul>
+						<li>Fixed share with services</li>
+						<li>Fixed save settings</li>
+					</ul>
+				
+					<b>Version 0.5.0</b>
+					<ul>
+						<li>Improved history</li>
+						<li>Added context menu</li>
+						<li>Added QR code</li>
+						<li>Added short url details</li>
+						<li>New popup layout</li>
+					</ul>
+				
+					<b>Version 0.4.7</b>
+					<ul>
+						<li>Changes in Copy url functionality</li>
+					</ul>
+				
+					<b>Version 0.4.6</b>
+					<ul>
+						<li>Added Google Buzz</li>
+						<li>Fixed shortcuts bug</li>
+					</ul>
+				
+					<b>Version 0.4.5</b>
+					<ul>
+						<li>Fixed "Could not load file 'scripts/content_script.js' for content script. It isn't UTF-8 encoded" issue</li>
+					</ul>
+				
+					<b>Version 0.4.4</b>
+					<ul>
+						<li>Fixed "Shortening..." bug</li>
+					</ul>
+					
+					<b>Version 0.4.3</b>
+					<ul>
+						<li>Fixed "Shortening..." bug</li>
+					</ul>
+				
+					<b>Version 0.4.2</b>
+					<ul>
+						<li>Added Google Reader</li>
+					</ul>
+				
+					<b>Version 0.4.1</b>
+					<ul>
+						<li>Release not obfuscate code</li>
+					</ul>
+				
+					<b>Version 0.4.0</b>
+					<ul>
+						<li>Added keyboard shortcuts</li>
+						<li>Added changelog</li>
+						<li>Added Delicious</li>
+						<li>Added Digg</li>
+						<li>Added MySpace</li>
+						<li>New layout of options page</li>
+						<li>Added option to show service icon</li>
+					</ul>
+
+					<b>Version 0.3.4</b>
+					<ul>
+						<li>Fixed share with services bug</li>
+					</ul>
+
+					<b>Version 0.3.3</b>
+					<ul>
+						<li>Added Blogger</li>
+						<li>Gmail and standard mail is now two separate services</li>
+						<li>Title on left side when share with Twitter</li>
+						<li>Fixed text color issue with some theme</li>
+					</ul>
+
+					<b>Version 0.3.2</b>
+					<ul>
+						<li>Added "Include title" option for twitter</li>
+					</ul>
+
+					<b>Version 0.3.1</b>
+					<ul>
+						<li>Added tooltip to extension's icon</li>
+					</ul>
+
+					<b>Version 0.3</b>
+					<ul>
+						<li>Added Facebook</li>
+						<li>Added mail</li>
+						<li>Added auto-copy</li>
+						<li>Added options page</li>
+					</ul>
+
+					<b>Version 0.2</b>
+					<ul>
+						<li>Added Twitter</li>
+						<li>New layout of the popup</li>
+					</ul>
+
+					<b>Version 0.1.1</b>
+					<ul>
+						<li>Copy automatically close popup</li>
+					</ul>
+
+					<b>Version 0.1</b>
+					<ul>
+						<li>Initial Release</li>
+					</ul>
+				</div>
+			</div >
+		</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+﻿body, td 
+{
+	font-family: arial, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+}
+ul 
+{
+	margin-top: 0;
+}
+.hidden
+{
+	visibility:hidden;
+	display:none;
+}
+.visible
+{
+	visibility: visible;
+	display: block;		
+}
+.tab
+{
+	padding: 2px 7px 2px 7px; 
+	font-size: 13px; 
+	font-weight: bold;
+}
+.tab-selected
+{
+	background-color:#FFF7D7; 
+}
+.tab-unselected
+{
+	color: #24B; 
+	cursor: pointer; 
+	text-decoration: underline; 
+}
+.div-preferences
+{
+	border-top-color: #FC6;
+	border-top-style: solid;
+	border-top-width: 2px;
+	margin: 0px 0px 0px 0px;
+	padding: 8px 0px 8px 0px;
+	vertical-align: top;
+}
+.div-first-preferences
+{
+	margin: 0px 0px 0px 0px;
+	padding: 8px 0px 8px 0px;
+	vertical-align: top;
+}
+.bold
+{
+	font-weight: bold;
+}
+.div-main
+{
+	border: 3px solid #FFCC66; 
+	border-radius: 4px; 
+	background-color: #FFCC66;
+}
+#titleDiv
+{
+	height: 23px; 
+	margin: 1px 27px 9px 5px;
+	font-size: 18px; 
+	font-weight: bold;
+}
+.link
+{
+	color: #24B; 
+	cursor: pointer; 
+	text-decoration: underline;
+	padding: 0px 8px 0px 8px;
+}
+.nowrap
+{
+	white-space: nowrap;
+}
+.alert-preferences
+{
+	text-align:center;
+	color: #FF0000;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 8px 0px;
+	vertical-align: top;
+}

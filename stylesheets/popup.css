@@ -1,0 +1,75 @@
+﻿@font-face {  
+  font-family: Inconsolata ;  
+  src: url( /fonts/Inconsolata.ttf ) format("truetype");  
+}
+body 
+{
+	font-family: arial;
+	color: #000000;
+	background-color: #FFFFFF; 
+	margin: 0;
+	padding: 0;
+}
+#loading
+{
+	margin: 8px;
+	font-size: 17px; 
+	white-space: nowrap;
+}
+#url
+{	
+	font-family: Inconsolata;
+	margin: 8px 8px 0px 8px;
+	font-size: 18px; 
+	white-space: nowrap;
+	text-align: center;
+	font-weight: 500;
+}
+#history
+{	
+	margin: 0px 8px 0px 8px;
+	font-size: 10px;
+	white-space: nowrap;
+	text-align: right;
+	font-weight:bold;	
+}
+#qrcode
+{
+	margin-top: 2px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+.title
+{
+	font-size: 10px;
+	background-color: #E5ECF9; 
+	font-weight: bold;
+	margin-bottom: 3px;
+	height: 1em;
+	padding: 0.3em 0 0.5em 3px;
+}
+.margin-top
+{
+	margin-top: 8px;
+}
+.item
+{
+	font-size: 14px; 
+	white-space: nowrap;
+	height: 1.5em;
+	margin: 0px 8px 0px 8px;
+}
+img
+{
+	vertical-align: text-top;
+}
+a:link , a:visited
+{
+	color: #000000;
+	text-decoration: none;
+}      
+a:hover, a:active 
+{
+	color: #000000;
+	text-decoration: underline;
+}
