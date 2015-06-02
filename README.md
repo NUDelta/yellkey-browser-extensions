@@ -2,8 +2,6 @@
 
 <img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/icon172.png">
 
-Chrome and Safari extensions to create Shoutkeys
-
 Chrome Installation:
 
 1. Download the Extension [shoutkey-chrome-extension.crx](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/dist/shoutkey-chrome-extension.crx)
