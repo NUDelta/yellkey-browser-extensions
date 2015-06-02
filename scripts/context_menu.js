@@ -71,7 +71,7 @@ function contextMenuCallback(response, info, tab)
 	{	
 		if(menu_item_id_array[info.menuItemId] == 'copy')
 		{
-			copyToClipboard(response.message);
+			copyToClipboard(concat("http://shoutkey.com/", response.message));
 		}
 		else
 		{
