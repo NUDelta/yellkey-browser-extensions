@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" charset="utf-8" src="jquery-1.7.min.js"></script>
+
+  <script type="text/javascript" charset="utf-8">
+    safari.application.addEventListener("command", function (e) {
+      if (e.command === "buttonclick") {
+
+        var longUrl = safari.application.activeBrowserWindow.activeTab.url;
+        var http = new XMLHttpRequest();
+        var url = "http://shoutkey.com/new";
+        var params = "url=" + longUrl + "&ttl=3600";
+        http.open("POST", url, true);
+        http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        http.setRequestHeader("Content-length", params.length);
+        http.setRequestHeader("Connection", "close");
+
+        http.onreadystatechange = function () {//Call a function when the state changes.
+          if (http.readyState == 4 && http.status == 200) {
+            var shoutkey = $(http.responseText).find(".hero-unit h1 a").text();
+            safari.extension.popovers[0].contentWindow.addLink(shoutkey);
+            safari.extension.toolbarItems[0].showPopover();
+          }
+        };
+        http.send(params);
+      }
+    }, false);
+  </script>
+</head>
+<body></body>
+</html>

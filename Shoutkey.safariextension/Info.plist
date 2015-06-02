@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Author</key>
+	<string>y3sh</string>
+	<key>Builder Version</key>
+	<string>10600.6.3</string>
+	<key>CFBundleDisplayName</key>
+	<string>Shoutkey</string>
+	<key>CFBundleIdentifier</key>
+	<string>y3sh.shoutkey</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>Chrome</key>
+	<dict>
+		<key>Global Page</key>
+		<string>global.html</string>
+		<key>Popovers</key>
+		<array>
+			<dict>
+				<key>Filename</key>
+				<string>popover.html</string>
+				<key>Height</key>
+				<real>40</real>
+				<key>Identifier</key>
+				<string>myPopover</string>
+				<key>Width</key>
+				<real>250</real>
+			</dict>
+		</array>
+		<key>Toolbar Items</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>buttonclick</string>
+				<key>Identifier</key>
+				<string>show-popover</string>
+				<key>Image</key>
+				<string>Icon.png</string>
+				<key>Label</key>
+				<string>Shoutkey</string>
+				<key>Popover</key>
+				<string>myPopover</string>
+			</dict>
+		</array>
+	</dict>
+	<key>Content</key>
+	<dict>
+		<key>Scripts</key>
+		<dict>
+			<key>End</key>
+			<array>
+				<string>listener.js</string>
+			</array>
+			<key>Start</key>
+			<array>
+				<string>jquery-1.7.min.js</string>
+			</array>
+		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>popover.css</string>
+		</array>
+	</dict>
+	<key>Description</key>
+	<string>Shoutkey links</string>
+	<key>DeveloperIdentifier</key>
+	<string>XJ7LVC2VW8</string>
+	<key>ExtensionInfoDictionaryVersion</key>
+	<string>1.0</string>
+	<key>Permissions</key>
+	<dict>
+		<key>Website Access</key>
+		<dict>
+			<key>Include Secure Pages</key>
+			<true/>
+			<key>Level</key>
+			<string>All</string>
+		</dict>
+	</dict>
+	<key>Website</key>
+	<string>http://www.y3sh.com</string>
+</dict>
+</plist>
