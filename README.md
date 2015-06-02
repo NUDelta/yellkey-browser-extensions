@@ -16,7 +16,7 @@ Safari Installation:
 2. Double click the extension, allow the install
 3. Restart Safari
 
-![x](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/images/demo.png "")
+![x](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/demo.png "")
 
 
 This extension is not affiliated with the authors of shoutkey
