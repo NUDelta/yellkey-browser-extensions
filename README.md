@@ -12,7 +12,7 @@ Chrome Installation:
 
 Safari Installation:
 
-1. Download the Extension [shoutkey-chrome-extension.crx](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/dist/shoutkey-safari-extension.safariextz)
+1. Download the Extension [shoutkey-safari-extension.safariextz](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/dist/shoutkey-safari-extension.safariextz)
 2. Double click the extension, allow the install
 3. Restart Safari
 
