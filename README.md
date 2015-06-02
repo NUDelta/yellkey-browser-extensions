@@ -1,6 +1,6 @@
 # Shoutkey Chrome and Safari Extension
 
-<img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/images/icon172.png">
+<img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/icon172.png">
 
 Chrome and Safari extensions to create Shoutkeys
 
@@ -19,4 +19,4 @@ Safari Installation:
 ![x](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/demo.png "")
 
 
-This extension is not affiliated with the authors of shoutkey
+This extension is not affiliated with the authors of Shoutkey
