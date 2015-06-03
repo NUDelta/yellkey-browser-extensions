@@ -1,10 +1,9 @@
 ﻿@font-face {  
-  font-family: Inconsolata ;  
-  src: url( /fonts/Inconsolata.ttf ) format("truetype");  
+  font-family: "Helvetica Neue", "Helvetica", "Arial";
 }
 body 
 {
-	font-family: arial;
+	font-family: "Helvetica Neue", "Helvetica", "Arial";
 	color: #000000;
 	background-color: #FFFFFF; 
 	margin: 0;
@@ -18,7 +17,6 @@ body
 }
 #url
 {	
-	font-family: Inconsolata;
 	margin: 8px 8px 0px 8px;
 	font-size: 18px; 
 	white-space: nowrap;
