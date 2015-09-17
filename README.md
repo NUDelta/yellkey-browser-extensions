@@ -2,7 +2,7 @@
 
 <img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/icon172.png">
 
-Chrome Installation:[Download from the Chrome Store](https://chrome.google.com/webstore/detail/shoutkey/doggebiamobffjeahijcmackhifbpien/related?hl=en-US)
+Chrome Installation: [Download from the Chrome Store](https://chrome.google.com/webstore/detail/shoutkey/doggebiamobffjeahijcmackhifbpien/related?hl=en-US)
 
 Safari Installation:
 
