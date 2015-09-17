@@ -2,11 +2,7 @@
 
 <img align="right" src="https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/chrome-extension/images/icon172.png">
 
-Chrome Installation:
-
-1. Download the Extension [shoutkey-chrome-extension.crx](https://raw.githubusercontent.com/NUDelta/shoutkey-chrome-extension/master/dist/shoutkey-chrome-extension.crx)
-2. Drag and drop shoutkey-chrome-extension.crx into your chrome://extensions (Chrome > Preferences > Extensions). Note that this won't work if dragged from the downloads bar. It must be dragged from the file system.
-3. Refresh your page or relaunch Chrome
+Chrome Installation:[(Download from the Chrome Store](https://chrome.google.com/webstore/detail/shoutkey/doggebiamobffjeahijcmackhifbpien/related?hl=en-US)
 
 Safari Installation:
 
