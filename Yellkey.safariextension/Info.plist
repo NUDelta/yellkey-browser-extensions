@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>y3sh</string>
+	<string>y3sh, kapil</string>
 	<key>Builder Version</key>
-	<string>10600.7.12</string>
+	<string>13604.4.7.1.3</string>
 	<key>CFBundleDisplayName</key>
-	<string>Shoutkey</string>
+	<string>Yellkey</string>
 	<key>CFBundleIdentifier</key>
-	<string>y3sh.shoutkey</string>
+	<string>com.yellkey.yellkey-extension</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -43,7 +43,7 @@
 				<key>Image</key>
 				<string>Icon.png</string>
 				<key>Label</key>
-				<string>Shoutkey</string>
+				<string>Yellkey</string>
 				<key>Popover</key>
 				<string>myPopover</string>
 			</dict>
@@ -53,24 +53,16 @@
 	<dict>
 		<key>Scripts</key>
 		<dict>
-			<key>End</key>
-			<array>
-				<string>listener.js</string>
-			</array>
 			<key>Start</key>
 			<array>
-				<string>jquery-1.7.min.js</string>
+				<string>jquery-3.2.1.min.js</string>
 			</array>
 		</dict>
-		<key>Stylesheets</key>
-		<array>
-			<string>popover.css</string>
-		</array>
 	</dict>
 	<key>Description</key>
-	<string>Shoutkey links</string>
+	<string>Yellkey links</string>
 	<key>DeveloperIdentifier</key>
-	<string>XJ7LVC2VW8</string>
+	<string>23NCCP9F44</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -84,6 +76,6 @@
 		</dict>
 	</dict>
 	<key>Website</key>
-	<string>http://www.y3sh.com</string>
+	<string>http://www.yellkey.com</string>
 </dict>
 </plist>
